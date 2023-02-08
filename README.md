@@ -10,8 +10,8 @@ If you are reading or using this, let us know how these data were useful for you
 ### Quick Start
 1. Make sure packages are installed (see #2 below) or use gbbseq-env.yml to set up Anaconda environment
 2. git clone https://github.com/sociovirology/human_influenza_GbBSeq.git
-3. chmod +x demultiplexing_GbBSeq6.sh
-4. ./demultiplexing_GbBSeq6.sh runA "shared/cross_list_runA_pairwise.txt" pairwise_infections (pairwise)
+3. chmod +x demultiplexing.sh
+4. ./demultiplexing.sh runA "shared/cross_list_runA_pairwise.txt" pairwise_infections (pairwise)
 5. ./demultiplexing_infection_conditions.sh (controls)
 6. chmod +x amplicon_curation_strain_assignment.sh
 6. ./amplicon_curation_strain_assignment.sh runA "shared/cross_list_runA_pairwise.txt" pairwise_infections
