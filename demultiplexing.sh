@@ -39,7 +39,9 @@ gunzip data/runA_*.fastq.gz
 
 #Change into working directory, which in this case is the base directory where the script resides
 BASEDIR=$(dirname "$0")
+echo BASEDIR
 cd $BASEDIR
+pwd
 
 #Make a directory to hold all the intermediate files etc.
 INTERMED_DIR="$1""_""$3"
