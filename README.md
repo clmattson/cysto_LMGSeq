@@ -11,12 +11,13 @@ If you are reading or using this, let us know how these data were useful for you
 1. Make sure packages are installed (see #2 below) or use gbbseq-env.yml to set up Anaconda environment
 2. git clone https://github.com/sociovirology/human_influenza_GbBSeq.git
 3. chmod +x demultiplexing.sh
-4. ./demultiplexing.sh runA "shared/cross_list_runA_pairwise.txt" pairwise_infections               #(pairwise)
-5. ./demultiplexing_infection_conditions.sh                                                         #(controls)
-6. chmod +x amplicon_curation_strain_assignment.sh
-6. ./amplicon_curation_strain_assignment.sh runA "shared/cross_list_runA_pairwise.txt" pairwise_infections
-6. Rscript aiv_detection_environment_analysis.R (or load interactively in R)
-7. Rscript aiv_detection_environment_analysis.R (or load interactively in R)
+4. ./demultiplexing.sh runA "shared/cross_list_runA_pairwise.txt" pairwise_infections      
+5. chmod +x amplicon_curation_strain_assignment.sh
+6. ./amplicon_curation_strain_assignment.sh runA "shared/cross_list_runA_pairwise.txt" pairwise_infections   
+7. ./demultiplexing.sh runA "shared/cross_list_runA_controls.txt" control_infections   
+8. ./amplicon_curation_strain_assignment.sh runA "shared/cross_list_runA_controls.txt" control_infections   
+6. Rscript pairwise_infections.R (or load interactively in R)
+7. Rscript control_infections.R (or load interactively in R)
 
 ### CONTENTS
 1. Project Description
@@ -57,7 +58,7 @@ Data consists of sequencing output from the illumina MiSeq platform, sample info
 ### 4. Code
 Below are descriptions of the code files used to generate the tables, figures, and statistics in the paper.
 
-1) demultiplexing_infection_conditions.sh: This file is shell script that downloads raw sequencing reads, demultiplexes each read; and generates a flat text summary file used in downstream analyses 
+1) demultiplexing.sh: This file is shell script that downloads raw sequencing reads, demultiplexes each read; and generates a flat text summary file used in downstream analyses 
 
 2) pairwise_infections.R: This file is an R script that analyzes reassortment in pairwise experimental coinfections among 5 human influenza A virus strains
 
